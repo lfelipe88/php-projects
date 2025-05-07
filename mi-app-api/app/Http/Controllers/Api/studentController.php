@@ -15,7 +15,7 @@ class studentController extends Controller
         if ($students->isEmpty()) {
             $data = [
                 'message' => 'No students found',
-                'status' => 444
+                'status' => 200
             ];
             return response()->json($data, 404);
         }
@@ -24,7 +24,7 @@ class studentController extends Controller
             'students' => $students,
             'status' => 200
         ];
-        return response()->json($data, 404);
+        return response()->json($data, 200);
     }
     public function store(Request $request)
     {
